@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main_activity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_margin_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_margin_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_split_rec_arrow_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_split_rec_arrow_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88"/>
+
+    <com.android.unitrans.CustomViews.MediumTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/app_name"
+        android:textColor="@color/red"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_margin_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_margin_right"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_1"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeMaxTextSize="45sp"
+        app:autoSizeStepGranularity="2sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/circular_btn_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_1"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_split_rec_arrow_1"
+        app:layout_constraintRight_toRightOf="@id/guideline_split_rec_arrow_2"
+        android:scrollbars="horizontal"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarFadeDuration="0">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.android.unitrans.CustomViews.CustomImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_arrow_left_black"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guideline_1"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_margin_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_split_rec_arrow_1"
+        android:focusable="true" />
+
+    <com.android.unitrans.CustomViews.CustomImageButton
+        android:id="@+id/forward_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_arrow_right_black"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guideline_1"
+        app:layout_constraintLeft_toRightOf="@id/guideline_split_rec_arrow_2"
+        app:layout_constraintRight_toRightOf="@id/guideline_margin_right"
+        android:focusable="true" />
+
+    <com.android.unitrans.CustomViews.MediumTextView
+        android:id="@+id/heading_on_time_late"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/on_time"
+        android:background="@drawable/rounded_corner_green_background"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/circular_btn_recycler_view"
+        app:layout_constraintRight_toRightOf="@id/guideline_margin_right"
+        app:layout_constraintBottom_toTopOf="@id/fragment"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="40dp"/>
+
+    <com.android.unitrans.CustomViews.MediumTextView
+        android:id="@+id/heading_title_letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c"
+        android:background="@drawable/circular_c"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_margin_left"
+        app:layout_constraintTop_toBottomOf="@id/circular_btn_recycler_view"
+        app:layout_constraintBottom_toTopOf="@id/fragment"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <com.android.unitrans.CustomViews.MediumTextView
+        android:id="@+id/heading_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|bottom"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/circular_btn_recycler_view"
+        app:layout_constraintLeft_toRightOf="@id/heading_title_letter"
+        app:layout_constraintBottom_toTopOf="@id/heading_desc"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <com.android.unitrans.CustomViews.MediumTextView
+        android:id="@+id/heading_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/heading_title"
+        app:layout_constraintLeft_toRightOf="@id/heading_title_letter"
+        app:layout_constraintBottom_toTopOf="@id/fragment"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.android.unitrans.BusFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/heading_title_letter"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_margin_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_margin_right"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

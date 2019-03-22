@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#dc3545</color>
+    <color name="gray">#6c757d</color>
+    <color name="tungsten">#d6d6d6</color>
+
+
+    <color name="A">#FDBB14</color>
+    <color name="B">#0E6734</color>
+    <color name="C">#D1509D</color>
+    <color name="D">#2E3092</color>
+    <color name="E">#94CA63</color>
+    <color name="F">#652C90</color>
+    <color name="G">#00AEC1</color>
+    <color name="J">#F26D28</color>
+    <color name="K">#4DC9F4</color>
+    <color name="L">#F68D41</color>
+    <color name="M">#AB1D53</color>
+    <color name="O">#8F5CA5</color>
+    <color name="P">#ED1C24</color>
+    <color name="Q">#ED1C24</color>
+    <color name="S">#EE2E24</color>
+    <color name="T">#EE2E24</color>
+    <color name="V">#61A543</color>
+    <color name="W">#1B75BB</color>
+    <color name="X">#771A19</color>
+    <color name="Z">#007F7F</color>
+</resources>
